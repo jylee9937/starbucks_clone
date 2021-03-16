@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starbucks Coffee Korea</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Starbucks" />
+  <meta property="og:title" content="Starbucks Coffee Korea" />
+  <meta property="og:description" content="스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+  <meta property="og:image" content="./images/starbucks_seo.jpg" />
+  <meta property="og:url" content="https://starbucks.co.kr" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="Starbucks" />
+  <meta property="twitter:title" content="Starbucks Coffee Korea" />
+  <meta property="twitter:description" content="스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+  <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
+  <!-- seo파일은 검색엔진에서 사용하는 것으로 우리가 따로 준비해서 제공할 수 잇다. -->
+  <meta property="twitter:url" content="https://starbucks.co.kr" />
+  <!--  브라우저에서는 favicon.ico라는 파일을 찾아서 탭의 아이콘으로 사용하게 되어있다. like index.html을 찾는 것처럼 -->
+  <link rel="icon" href="./favicon.png" />
+  <!-- 만약 따로 아이콘을 지정하고 싶다면 이 방법으로 하면 된다. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <!-- html은 문서 파일이고 위에서 아래로 읽기 때문에 문서를 작성한 순서도 중요하다. -->
+  <!-- 폰트파일을 먼저 불러온 후 css를 적용해야하기 때문에 이렇게 먼저 배치해둔다. -->
+  <!-- google fonts 검색을 통해 찾아서 적용함 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/css/main.css" />
+  <!-- 하나의 태그만 사용할 경우 /를 사용하지 않아도 되지만 엄격한 문법을 제공하고 싶다고 이렇게 다 붙여도 된다. -->
+  <script defer src="./js/main.js"></script>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+
+      <a href="/" class="logo">
+        <!-- 메인아이콘을 누르면 홈페이지로 넘어가는 것을 구현함. -->
+        <img src="./images/starbucks_logo.png" alt="STARBUCKS" />
+      </a>
+      <div class="sub-menu">
+        <ul class="menu">
+          <li>
+            <a href="/signin">Sign In</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">My starbucks</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Customer Service & Ideas</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Find a Store</a>
+          </li>
+        </ul>
+        <div class="search">
+          <input type="text"/>
+          <div class="material-icons">
+            search
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>
