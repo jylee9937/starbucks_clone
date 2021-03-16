@@ -17,7 +17,8 @@ a{
 }
 /* HEADER */
 header{
-  background-color: royalblue;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
 }
 header .inner{
   width: 1100px;
@@ -25,7 +26,6 @@ header .inner{
   margin: 0 auto;
   /* 위아래 0  좌우 자동*/
   /* 가운데 정령을 할 수 있다. */
-  background-color: orange;
   position: relative;
   /* 자식요소에서 position:absolute를 사용해서 이렇게 지정하기 위해 넣은 것이다. */
 }
@@ -38,9 +38,11 @@ header .logo{
   bottom: 0px;
   left: 0px;
   margin: auto;
-  display: none;
 }
 header .sub-menu{
+  position: absolute;
+  top: 10px;
+  right: 0px;
   display: flex;
 }
 header .sub-menu ul.menu{
@@ -106,4 +108,9 @@ header .sub-menu .search .material-icons {
   bottom: 0;
   right: 5px;
   margin: auto;
+  transition: .4s;
 }
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
+}
+/* 일치선택자  */
