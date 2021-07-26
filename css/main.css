@@ -56,6 +56,32 @@ a {
   background-color: transparent;
   color: #333;
 }
+/* 선택자 우선순위가 있다고 한다.*/
+.btn.btn--brown{
+  color: #592B18;
+  border-color: #592B18;
+}
+.btn.btn--brown:hover{
+  color: #FFF;
+  background-color: #592B18;
+}
+.btn.btn--gold{
+  color: #D9AA8A;
+  border-color: #D9AA8A;
+}
+.btn.btn--gold:hover{
+  color: #FFF;
+  background-color: #FFF;
+}
+.btn.btn--white{
+  color: #FFF;
+  border-color: #FFF;
+}
+.btn.btn--white:hover{
+  color: #333;
+  background-color: #FFF;
+}
+
 /* HEADER */
 header {
   width: 100%;
@@ -289,7 +315,11 @@ header .badges .badge {
   left: -10px;
 }
 
-.visual .title .btn {}
+.visual .title .btn {
+  position: absolute;
+  top: 259px;
+  left: 173px;
+}
 
 .visual .cup1.image {
   /* 클래스 선택자 두개가 붙어 있으니까 동시에 조건이 만족하는 것을 가리키는 일치 선택자 */
