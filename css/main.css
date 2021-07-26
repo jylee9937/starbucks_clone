@@ -30,6 +30,7 @@ header {
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
   position: fixed;
+  /* 다른 요소들의 배치와 관계 없이 뷰포트를 기준으로 배치하겠다. */
   top: 0;
 }
  
@@ -219,4 +220,36 @@ header .badges .badge{
   margin-bottom: 12px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
   cursor: pointer;
+}
+/* VISUAL */
+.visual{
+  margin-top: 120px;
+  /* 이 120px의 수치는 header > .inner에서 가져온 것이다. */
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+  /* 요소 부분은 HTML로 추가하고, 배경 이미지 및 설정은 CSS로 하는 듯 */
+  /* 이 상태로는 visual의 컨텐츠 보이는 것이 없기 때문에 배경 이미지가 보이지 않는다. */
+}
+.visual .inner{ 
+  height: 646px;
+  /* 높이값을 주면 배경 이미지가 높이 크기만큼 보이게 된다. */
+  background-color: orange;
+  /* 작업시 inner 영역을 시각적으로 확인용 */
+}
+.visual .title{
+  /* inner는 구조적으로는 title과 상관이 없기 때문에 이렇게 생략해주는 것이 가독성에 도움이 됨 */
+}
+.visual .title .btn{
+}
+.visual .cup1.image{
+  /* 클래스 선택자 두개가 붙어 있으니까 동시에 조건이 만족하는 것을 가리키는 일치 선택자 */
+}
+.visual .cup1.text {
+}
+.visual .cup2.image{
+}
+.visual .cup2.text {
+}
+.visual .spoon{
+
 }

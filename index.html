@@ -17,19 +17,24 @@
   <meta property="twitter:description" content="스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
   <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
   <meta property="twitter:url" content="https://starbucks.co.kr" />
- 
+
   <link rel="icon" href="./favicon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/css/main.css" />
- 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <script defer src="./js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+    integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="./js/main.js"></script>
 
 </head>
- 
+
 <body>
 
   <!-- HEADER -->
@@ -55,7 +60,7 @@
           </li>
         </ul>
         <div class="search">
-          <input type="text"/>
+          <input type="text" />
           <div class="material-icons">
             search
           </div>
@@ -358,7 +363,7 @@
             </div>
           </div>
         </li>
-      </ul>      
+      </ul>
     </div>
     <div class="badges">
       <div class="badge">
@@ -369,6 +374,24 @@
       </div>
     </div>
   </header>
+
+  <!-- VISUAL -->
+  <!-- div와 동일한 기능이지만 의미적으로 사용하기 위해 이렇게 하는 것임 -->
+  <section class="visual">
+    <div class="inner">
+      <!-- 여기에서 inner class를 만드는 이유는 다음에 나올 내용들이 가운데 정렬할 때  -->
+      <div class="title">
+        <img src="./images/visual_title.png" alt="STARBUCKS DELIGHTFUL START TO THE YEARS" />
+        <!-- img의 텍스트들을 alt에 대체 텍스트를 작성하는 것이 좋다. -->
+        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+        <img src="./images/visual_cup1.png" alt="new OATMEAL LATTE" class="cup1 image" />
+        <img src="./images/visual_cup1_text.png" alt="오트밀 라떼" class="cup1 text" />
+        <img src="./images/visual_cup2.png" alt="new STARBUCKS CARAMEL CRUMBLE MOCHA" class="cup2 image" />
+        <img src="./images/visual_cup2_text.png" alt="스타벅스 카라멜 크럼블 모카" class="cup2 text" />
+        <img src="./images/visual_spoon.png" alt="Spoon" class="spoon" />
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
