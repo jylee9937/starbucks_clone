@@ -18,12 +18,44 @@ img {
 a {
   text-decoration: none;
 }
-.inner{
+
+.inner {
   width: 1100px;
   margin: 0 auto;
   position: relative;
 }
 
+.btn{
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  /* 자식요소에도 이어간다고 함. ??? */
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  /* border를 기준으로 뭐 한다는 데 뭔소리여 ??? */
+  display: block;
+  /* 혹시 모르는 크기를 부여하지 않으면 나오지 않는 애들을 생각하고, block하면 된다. */
+  transition: .4s;
+  /* 얘는 여기에 왜 넣었을까??? */
+}
+
+.btn:hover{
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse{
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover{
+  background-color: transparent;
+  color: #333;
+}
 /* HEADER */
 header {
   width: 100%;
@@ -32,9 +64,10 @@ header {
   position: fixed;
   /* 다른 요소들의 배치와 관계 없이 뷰포트를 기준으로 배치하겠다. */
   top: 0;
+  z-index: 9;
 }
- 
-header > .inner {
+
+header>.inner {
   height: 120px;
 }
 
@@ -143,9 +176,7 @@ header .main-menu {
   display: flex;
 }
 
-header .main-menu .item {
-
-}
+header .main-menu .item {}
 
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
@@ -166,63 +197,77 @@ header .main-menu .item .item__contents {
   left: 0;
   display: none;
 }
+
 header .main-menu .item:hover .item__contents {
   display: block;
 }
-header .main-menu .item .item__contents .contents__menu{
+
+header .main-menu .item .item__contents .contents__menu {
   background-color: #2c2a29;
 }
-header .main-menu .item .item__contents .contents__menu > ul{
+
+header .main-menu .item .item__contents .contents__menu>ul {
   display: flex;
   padding: 20px 0;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li{
+
+header .main-menu .item .item__contents .contents__menu>ul>li {
   width: 220px;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li h4{
+
+header .main-menu .item .item__contents .contents__menu>ul>li h4 {
   padding: 3px 0 12px p;
   font-size: 14px;
   color: #fff;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li ul{
-   /* 구조적으로 넣을 때 참고용으로 사용. 필요 없을 시 삭제하면 돼 */
+
+header .main-menu .item .item__contents .contents__menu>ul>li ul {
+  /* 구조적으로 넣을 때 참고용으로 사용. 필요 없을 시 삭제하면 돼 */
 }
-header .main-menu .item .item__contents .contents__menu > ul > li ul li{
+
+header .main-menu .item .item__contents .contents__menu>ul>li ul li {
   padding: 5px 0;
   font-size: 12px;
   color: #999;
   cursor: pointer;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover{
+
+header .main-menu .item .item__contents .contents__menu>ul>li ul li:hover {
   color: #669900;
 }
-header .main-menu .item .item__contents .contents__texture{
+
+header .main-menu .item .item__contents .contents__texture {
   padding: 26px 0;
   font-size: 12px;
   background-image: url("../images/main_menu_pattern.jpg");
 }
-header .main-menu .item .item__contents .contents__texture h4{
+
+header .main-menu .item .item__contents .contents__texture h4 {
   color: #999;
   font-weight: 700;
 }
-header .main-menu .item .item__contents .contents__texture p{
+
+header .main-menu .item .item__contents .contents__texture p {
   color: #669900;
   margin: 4px 0 14px;
 }
-header .badges{
+
+header .badges {
   position: absolute;
   top: 132px;
   right: 12px;
 }
-header .badges .badge{
+
+header .badges .badge {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 12px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
   cursor: pointer;
 }
+
 /* VISUAL */
-.visual{
+.visual {
   margin-top: 120px;
   /* 이 120px의 수치는 header > .inner에서 가져온 것이다. */
   background-image: url("../images/visual_bg.jpg");
@@ -230,26 +275,52 @@ header .badges .badge{
   /* 요소 부분은 HTML로 추가하고, 배경 이미지 및 설정은 CSS로 하는 듯 */
   /* 이 상태로는 visual의 컨텐츠 보이는 것이 없기 때문에 배경 이미지가 보이지 않는다. */
 }
-.visual .inner{ 
+
+.visual .inner {
   height: 646px;
   /* 높이값을 주면 배경 이미지가 높이 크기만큼 보이게 된다. */
-  background-color: orange;
-  /* 작업시 inner 영역을 시각적으로 확인용 */
 }
-.visual .title{
-  /* inner는 구조적으로는 title과 상관이 없기 때문에 이렇게 생략해주는 것이 가독성에 도움이 됨 */
-}
-.visual .title .btn{
-}
-.visual .cup1.image{
-  /* 클래스 선택자 두개가 붙어 있으니까 동시에 조건이 만족하는 것을 가리키는 일치 선택자 */
-}
-.visual .cup1.text {
-}
-.visual .cup2.image{
-}
-.visual .cup2.text {
-}
-.visual .spoon{
 
+.visual .title {
+  /* inner는 구조적으로는 title과 상관이 없기 때문에 이렇게 생략해주는 것이 가독성에 도움이 됨 */
+  position: absolute;
+  /* 부모요소를 기준으로 위치하도록 한다. 부모요소에 relative있음 */
+  top: 88px;
+  left: -10px;
 }
+
+.visual .title .btn {}
+
+.visual .cup1.image {
+  /* 클래스 선택자 두개가 붙어 있으니까 동시에 조건이 만족하는 것을 가리키는 일치 선택자 */
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+}
+
+.visual .cup1.text {
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+
+.visual .cup2.image {
+  position: absolute;
+  bottom: 0;
+  right: 162px;
+}
+
+.visual .cup2.text {
+  position: absolute;
+  top: 321px;
+  right: 416px;
+}
+
+.visual .spoon {
+  position: absolute;
+  bottom: 0;
+  left: 275px;
+}
+/* 여기까지 할 때 작업한 것이 이전에 작업한 것을 덮는 것을 확인할 수 있음.*/
+/* 이제 쌓인 순서로 인한 문제가 발생함을 인지 */
+/* 이제 z-index를 추가함 */
