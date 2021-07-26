@@ -357,3 +357,57 @@ header .badges .badge {
 .visual .fade-in{
   opacity: 0;
 }
+
+/* NOTICE */
+.notice{
+
+}
+.notice .notice-line{
+  position: relative;
+}
+.notice .notice-line .bg-left{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+}
+.notice .notice-line .bg-right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+.notice .notice-line .inner{
+  height: 62px;
+  display: flex;
+  /* 자식요소들이 좌우로 정렬되도록 바꿈. */
+}
+.notice .notice-line .inner__left{
+  width: 60%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  /* 자식요소들이 수평을 이루도록 하고 싶을 때 작성하면된다. 자식요소 작성 후 작성하라! */
+}
+.notice .notice-line .inner__left .h2{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.notice .notice-line .inner__left .swiper-container{
+  background-color: oragne;
+  flex-grow: 1;
+  /* 부모요소에 flex를 하면 자식요소들은 최대한 너비를 없애서 수평을 이룬다. */
+  /* flex-grow를 하면 최대한 너비를 넓히도록 한다. */
+}
+.notice .notice-line .inner__left .notice-line__more{
+}
+.notice .notice-line .inner__right{
+  width: 40%;
+  height: 100%;
+}
