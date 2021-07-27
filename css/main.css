@@ -380,6 +380,7 @@ header .badges .badge {
   width: 50%;
   height: 100%;
   background-color: #f6f5ef;
+  /* 왜 배경은 50: 50으로 하고, 다시 이너를 비율 맞춰서 하는 걸까? 한번에 하면 안되나? */
 }
 .notice .notice-line .inner{
   height: 62px;
@@ -392,22 +393,55 @@ header .badges .badge {
   background-color: #333;
   display: flex;
   /* 자식요소들이 수평을 이루도록 하고 싶을 때 작성하면된다. 자식요소 작성 후 작성하라! */
+  align-items: center;
 }
-.notice .notice-line .inner__left .h2{
+.notice .notice-line .inner__left h2{
   color: #fff;
   font-size: 17px;
   font-weight: 700;
   margin-right: 20px;
 }
 .notice .notice-line .inner__left .swiper-container{
-  background-color: oragne;
+  height: 62px;
+  background-color: orange;
   flex-grow: 1;
   /* 부모요소에 flex를 하면 자식요소들은 최대한 너비를 없애서 수평을 이룬다. */
   /* flex-grow를 하면 최대한 너비를 넓히도록 한다. */
 }
 .notice .notice-line .inner__left .notice-line__more{
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 수직 정렬을 의미한다. > 어디에 영향? */
+}
+.notice .notice-line .inner__left .notice-line__more .material-icons{
+  color: #fff;
+  font-size: 30px;
+  /* 아이콘의 기본 크기는 24px라고 한다. */
 }
 .notice .notice-line .inner__right{
   width: 40%;
   height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* 수평 정렬의 끝부분부터 정렬하겠다.*/
+  align-items: center;
+  /* 수직으로 센터에 아이템을 넣겠다. */
+}
+.notice .notice-line .inner__right h2{
+  font-size: 17px;
+  font-weight: 700;
+}
+.notice .notice-line .inner__right .toggle-promotion{
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice .notice-line .inner__right .toggle-promotion .material-icons{
+  font-size: 30px;
 }
