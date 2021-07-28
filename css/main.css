@@ -403,10 +403,18 @@ header .badges .badge {
 }
 .notice .notice-line .inner__left .swiper-container{
   height: 62px;
-  background-color: orange;
   flex-grow: 1;
   /* 부모요소에 flex를 하면 자식요소들은 최대한 너비를 없애서 수평을 이룬다. */
   /* flex-grow를 하면 최대한 너비를 넓히도록 한다. */
+}
+.notice .notice-line .inner__left .swiper-slide{
+  height: 62px;
+  display: flex;
+  align-items: center;
+
+}
+.notice .notice-line .inner__left .swiper-slide a{
+  color: #fff;
 }
 .notice .notice-line .inner__left .notice-line__more{
   width: 62px;
