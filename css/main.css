@@ -453,3 +453,28 @@ header .badges .badge {
 .notice .notice-line .inner__right .toggle-promotion .material-icons{
   font-size: 30px;
 }
+
+.notice .promotion{
+  height: 693px;
+  background-color: #f6f5ef;
+  position: relative;
+}
+.notice .promotion .swiper-container{
+  width: calc(819px * 3 +  20px);
+  /* 너비값을 우리가 수동으로 계산하고 넣을 수도 있지만 CSS에서는 이렇게 계산해주는 함수를 제공한다.*/
+  /* 아래 방식처럼 사용해도 유용하게 사용할 수 있다. */
+  /* width: calc(100%-50px); */
+  height: 553px;
+  /* 아래 3줄은 테스트를 위한 코드 */
+  background-color: orange;
+  text-align: center;
+  font-size: 200px;
+  position: absolute;
+  top: 40px;
+
+  /* 50%를 왼쪽으로 땡기고, 요소 크기의 절반만큼 왼쪽으로 땡기는 이유 */
+  left: 50%;
+  /* 왼쪽으로 50%가는 것은 뷰포트의 크기에 따라 가운데 기준이 되기 위함이고, */
+  margin-left: calc((819px * 3 +  20px) / -2);
+  /* 요소의 크기 만큼 왼쪽으로 다시 땡겨서 요소가 가운데에 있도록 하기 위함이다. */
+}
