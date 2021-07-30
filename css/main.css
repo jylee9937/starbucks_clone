@@ -493,3 +493,59 @@ header .badges .badge {
   /* 요소를 가운데에 배치하는 방식 위의 4줄 */
   /* 너비가 있어야 margin을 계산해주는데, 공통부분에 btn의 너비를 설정해주었기 때문에 따로 작성하지 않아도 돼 */
 }
+.notice .promotion .swiper-pagination{
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  /* 미리 지정된 스타일 시트를 웹브라우저를 통해서 확인할 수 있다. */
+  /* 공식문서에 나오지 않는 내용들도 있기 때문에 사용할 라이브러리를 설치해서 어떻게 동작되는지 보는 것이 중요하다. */
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet{
+  /* 개발자 도구로 확인한 라이브러리에 의해서 생성된 요소 */
+  background-color: transparent;
+  background-image: url("../images/promotion_slide_pager.png");
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  outline: none;
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child{
+  /* 마지막 요소만을 다루기 위한 작업 */
+  margin-right: 0;
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet-active{
+  background-image: url("../images/promotion_slide_pager_on.png");
+}
+.notice .promotion .swiper-prev,
+.notice .promotion .swiper-next{
+  /* 이런 식으로 다중 선택이 가능하다 */
+  /* 이렇게 다중선택자를 사용한다면 하나당 한줄로 작성하라. 가독성을 위해서 */
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* justify-content랑 align-items의 정렬 축 기준 파악하기 */
+  transition: .4s;
+  /* 전화효관에 대한 시간은 기본 상태를 설정해주는 곳에 하고, 전화하고자 하는 것은 상태를 설정하는 곳에 */
+}
+.notice .promotion .swiper-prev{
+  left: 50%;
+  margin-left: -480px;
+}
+.notice .promotion .swiper-next{
+  right: 50%;
+  margin-right: -480px;
+}
+.notice .promotion .swiper-prev:hover,
+.notice .promotion .swiper-next:hover{
+  background-color: #333;
+  color: #fff;
+}
