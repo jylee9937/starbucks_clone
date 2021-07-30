@@ -75,3 +75,21 @@ new Swiper('.promotion .swiper-container', {
     nextEl: '.promotion .swiper-next'
   }
 });
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener('click', function(){
+  isHidePromotion = !isHidePromotion;
+  if(isHidePromotion){
+    // 숨김 처리!
+    promotionEl.classList.add('hide');
+    // promotionEl로 선택된 요소에 hide라는 이름의 클래스를 추가시키는 코드.
+  } else{
+    // 보임 처리!
+    promotionEl.classList.remove('hide');
+  }
+});
+// 자바스크립트를 통해서는 프로그래밍적으로의 역할만 수행하여 클래스 추가 삭제만 해주는 것이 좋다.
+// 단순한 것이 아닌 자바스크립트와 다른 CSS의 연계로 하는 것이 한계가 있는 경우는 라이브러리를 이용해서
+// 자바스크립트 내에서 처리하는 것이다. GSAP과 같이
