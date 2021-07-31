@@ -643,3 +643,11 @@ header .badges .badge {
   height: 100%;
   /* 이런 식으로 유튜브 위에 덮개를 만들어 주는 것이다.  */
 }
+#player{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* 부모요소가 absolute여도 괜찮다고 한다. */
+  top: 0;
+  left: 0;
+}
