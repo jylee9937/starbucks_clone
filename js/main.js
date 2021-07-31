@@ -93,3 +93,32 @@ promotionToggleBtn.addEventListener('click', function(){
 // 자바스크립트를 통해서는 프로그래밍적으로의 역할만 수행하여 클래스 추가 삭제만 해주는 것이 좋다.
 // 단순한 것이 아닌 자바스크립트와 다른 CSS의 연계로 하는 것이 한계가 있는 경우는 라이브러리를 이용해서
 // 자바스크립트 내에서 처리하는 것이다. GSAP과 같이
+
+// 범위 랜덤 함수(소수점 2자리까지)
+function random(min, max) {
+  // `.toFixed()`를 통해 반환된 문자 데이터를,
+  // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
+
+
+function floatingObject(selector, delay, size){
+  //gsap.tp(요소, 지속시간, 옵션);
+  gsap.to(
+    selector, //선택자
+    random(1.5, 2.5), //애니메이션 동작 시간
+    { //옵션
+      y: size,
+      repeat: -1,
+      // 무한반복을 의미함. 이거는 gsap에서 정의한 것임.
+      yoyo: true,
+      //실행한 동작의 반대 동작이 일어날 수 있도록 허용함.
+      ease: Power1.easeInOut,
+      delay: random(0, delay)
+      // 동작이 시작되기 전에 멈춰있는 시간
+      // 몇 초 뒤에 애니메이션을 시작하겠다.
+  });
+}
+floatingObject('.floating1', 1, 15); 
+floatingObject('.floating2', 0.5, 15); 
+floatingObject('.floating3', 1.5, 20); 
