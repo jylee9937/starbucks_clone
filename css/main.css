@@ -807,3 +807,45 @@ header .badges .badge {
   /* 얘는 왜 가운데 정렬이 자동으로 되고, 다른 애들은 50% 뭐 이런거 해야되냐..? */
   /* 너비가 미리 지정되어 있다는 것 같은데.. 무슨 소리일까? */
 }
+/* FIND STORE */
+.find-store{
+  background-image: url("../images/find_store_bg.jpg");
+}
+.find-store .inner{
+  height: 400px;
+}
+.find-store .texture1{
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+.find-store .texture2{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.find-store .picture{
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+  /* 그림자 만드는 코드인데, 어떤 것들인지 알아볼 필요가 있다. */
+  position: absolute;
+}
+.find-store .picture1{
+  top: -60px;
+  left: 0;
+}
+.find-store .picture2{
+  top: 150px;
+  left: 250px;
+}
+.find-store .text-group{
+  position: absolute;
+  top: 120px;
+  left: 550px;
+}
+.find-store .text-group .title{
+  margin-bottom: 20px;
+}
+.find-store .text-group .description{
+  margin-bottom: 20px;
+}
