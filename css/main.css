@@ -8,7 +8,8 @@ body {
   /* 폰트에 따라 최적의 높이가 다를 수 있다. */
   font-family: 'Nanum Gothic', sans-serif;
   /* 폰트를 적용하는 코드이다. */
-  height: 3000px;
+  /* height: 6000px; */
+  /* 이거 있고 없고의 차이가 스크롤의 범위가 달라지더라.. */
 }
 
 img {
@@ -664,8 +665,89 @@ header .badges .badge {
   top: 350px;
   left: 150;
 }
-.youtube .floating3{
+
+/* SEASON PRODUCT */
+.season-product {
+  background-image: url("../images/season_product_bg.jpg");
+
+}
+.season-product .inner{
+  height: 400px;
+  /* 높이를 설정해주니까 product이미지 기준이 아니라 inner 기준으로 배경 이미지 크기가 바뀌더라..?? */
+}
+.season-product .floating3{
   position: absolute;
-  bottom: -200px;
+  top: -200px;
   right: 0;
+}
+/* overflow hidden을 설정했기 때문에 잘려서 표시된 부분을 아래로 가져와서 배치해준다. */
+.season-product .text-group{
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+.season-product .text-group .title{
+  margin-bottom: 10px;
+}
+.season-product .text-group .description{
+  margin-bottom: 15px;
+}
+.season-product .text-group .more {
+}
+
+/* RESERVE COFFEE */
+.reserve-coffee{
+  background-image: url("../images/reserve_bg.jpg");
+}
+.reserve-coffee .inner{
+  height: 400px;
+}
+.reserve-coffee .reserve-logo{
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+.reserve-coffee .text-group{
+  position: absolute;
+  top: 124px;
+  left: 208px
+}
+.reserve-coffee .product{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* PICK YOUR FAVORITE */
+.pick-your-favorite{
+  background-image: url("../images/favorite_bg.jpg");
+  background-repeat: no-repeat;
+  /* 배경이미지를 반복하여 넣지 않는다. */
+  background-position: center;
+  /* 배경이미지의 위치를 가운데에 둔다. */
+  background-attachment: fixed;
+  /* 뷰포트를 기준으로 고정시켜놔서 화면을 스크롤해도 움직이지 않도록 고정시킨 것. */
+  /* 스크롤하면 고정된 상태에서 해당 이미지의 위치의 장면만 보이게 된다. */
+  background-size: cover;
+  /* 이거는 한번 찾아봐야될 듯 */
+  /* 이렇게 활용되는 것이 패럴랙스 효과?? */
+}
+.pick-your-favorite .inner{
+  padding: 110px 0;
+  /* margin과 padding의 차이 */
+}
+.pick-your-favorite .text-group{
+  margin-left: 100px;
+  width: 362px;
+  display: flex;
+  flex-wrap: wrap;
+  /* 줄바꿈 허용 */
+  justify-content: flex-end;
+  /* justify는 수평으로 기준으로 어디에 위치할지 정하는 것. 오른쪽에 몰아넣기 */
+}
+.pick-your-favorite .text-group .title{
+  margin-bottom: 40px;
+}
+.pick-your-favorite .text-group .description{
+  margin-bottom: 40px;
 }
