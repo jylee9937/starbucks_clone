@@ -129,11 +129,11 @@ spyEls.forEach(function(spyEl){
   new ScrollMagic
     .Scene({
       triggerElement: spyEl, //보여짐 여부를 감시할 요소를 지정
-      triggerHook: .8, 
+      triggerHook: .8
     })
-    .setClassToggle()
-    .addTo();
-    // 가동성을 위해 메소드 체이닝은 이렇게 작성
+    .setClassToggle(spyEl, 'show') //(class를 추가할 요소, 추가할 클래스명)
+    .addTo(new ScrollMagic.Controller());
+    // 이렇게 작성하는 부분은 공식문서에서 시키는대로 해도 된다... 정확한 로직은 파악 안해도 됨..
   // Scene은 scrollmagic을 통해서 특정한 요소를 감시하는 옵션을 지정하는 메소드
   // setClassToggle는 메소드체이닝을 통해서 연결되고, HTML에 class명을 추가했다 뺏다 하는 기능을 하는 메소드
 });
