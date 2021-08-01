@@ -615,7 +615,6 @@ header .badges .badge {
 .youtube .youtube__area{
   width: 1920px;
   /* 일반적인 FullHD화면에서 보는 것을 가정하여 너비를 이렇게 설정 */
-  background-color: orange;
   position: absolute;
   left: 50%;
   /* 왼쪽에서부터 50%지점에 위치하도록 한다. */
@@ -750,4 +749,61 @@ header .badges .badge {
 }
 .pick-your-favorite .text-group .description{
   margin-bottom: 40px;
+}
+
+/* RESERVE STORE */
+.reserve-store{
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+}
+.reserve-store .inner{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserve-store .medal{
+  width: 334px;
+  height: 334px;
+  /* 컨테이너 역할을 하는 요소에는 아이템 크기와 동일하게 해야 한다. 그래서 hover 영역이 item 크기와 동일해진다. */
+  perspective: 600px;
+  /* 정확히 이게 어떤 역할을 하는거냐..? */
+}
+.reserve-store .medal .front,
+.reserve-store .medal .back{
+  width: 334px;
+  height: 334px;
+  backface-visibility: hidden;
+  transition: 1s;
+  position: absolute;
+}
+.reserve-store .medal .front{
+ 
+  transform: rotateY(0deg);
+/* 명시적으로 작성하는 것임. 하위 버전의 브라우저에서도 잘 작동하기 위함. */
+}
+.reserve-store .medal:hover .front{
+  /* medal부분에 hover하면 그 안에 있는 item요소들을 어떻게 할 것인지 하는 것이다. */
+  transform: rotateY(180deg);
+}
+.reserve-store .medal .back{
+  transform: rotateY(-180deg);
+  /* Y축을 기준으로 -180도 돌리는 것임 */
+}
+.reserve-store .medal:hover .back{
+  transform: rotateY(0deg);
+}
+.reserve-store .medal .back .btn{
+  position: absolute;
+  top:240px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* 얘는 왜 가운데 정렬이 자동으로 되고, 다른 애들은 50% 뭐 이런거 해야되냐..? */
+  /* 너비가 미리 지정되어 있다는 것 같은데.. 무슨 소리일까? */
 }
