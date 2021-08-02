@@ -148,3 +148,7 @@ spyEls.forEach(function(spyEl){
   // Scene은 scrollmagic을 통해서 특정한 요소를 감시하는 옵션을 지정하는 메소드
   // setClassToggle는 메소드체이닝을 통해서 연결되고, HTML에 class명을 추가했다 뺏다 하는 기능을 하는 메소드
 });
+
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
+// 값을 알아내거나 지정하는데 사용할 수 있다.

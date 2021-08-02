@@ -921,3 +921,86 @@ header .badges .badge {
   background-color: #fff;
   color: #333 ;
 }
+
+/* FOOTER */
+footer{
+  background-color: #272727;
+  border-top: 1px solid #333;
+}
+footer .inner{
+  padding: 40px 0 60px 0;
+}
+footer .menu{
+  display: flex;
+  justify-content: center;
+}
+footer .menu li{
+  position: relative;
+  /* 그래서 여기에 추가해줌 */
+}
+footer .menu li::before{
+  /* before로 만들어진 요소는 기본적으로 display: inline요소이다. */
+  /* 그러나 position: absolute나 fixed를 사용하면 display가 자동으로 block으로 바뀐다. */
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  /* ::before의 부모요소는 ::before가 없는 요소이다. */
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  /* 이렇게 하면 각 요소의 오른쪽에 점이 생긴다. */
+  margin: auto;
+}
+footer .menu li:last-child::before{
+  display: none;
+}
+footer .menu li a{
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  /* display: inline요소들은 마진과 패딩의 위아래  여백을 정상적으로 사용할 수 없다.*/
+  display: block;
+  /* 이렇게 display와 padding을 설정해주는 이유는 사용자가 클릭할 수 있는 넓이를 넓혀주기 위함 */
+}
+footer .menu li a.green{
+  color: #669900;
+}
+footer .btn-group{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+footer .btn-group .btn{
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer .btn-group .btn:last-child{
+  margin-right: 0;
+}
+footer .info{
+  margin-top: 30px;
+  text-align: center;
+}
+footer .info span{
+  /* span은 inline요소여서 수직으로 쌓이는 것이 아니라 수평으로 쌓인다고 한다. */
+  /* span은 text로 해석된다고 한다. */
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+footer .info span:last-child{
+  margin-right: 0;
+}
+footer .copyright{
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+footer .logo{
+  /* img요소는 가로 너비를 웹페이지에서 알고 있다고 한다.*/
+  margin: 30px auto 0;
+}
