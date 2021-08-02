@@ -876,3 +876,48 @@ header .badges .badge {
 .find-store .text-group .description{
   margin-bottom: 20px;
 }
+
+/* AWARDS */
+.awards{
+  background-color: #272727;
+}
+.awards .inner{
+  padding: 40px 0;
+}
+.awards .swiper-contatiner{
+ width: 100%;
+ height: 40px;
+}
+.awards .swiper-prev,
+.awards .swiper-next{
+  width: 42px;
+  height: 42px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  outline: none;
+  color: #fff;
+  /* 이 속성은 상속되는 것을 이용 */
+  opacity: .3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  /* 가운데 배치하려고 할 때 우리가 배치하고자 하는 기준선의 길이가 작성되어있는지 확인해야함 */
+  /* 여기서는 수직으로 가운데 배치하려고 하는데, height가 작성되어 있으므로 OK */
+}
+.awards .swiper-prev{
+  left: -100px;
+}
+.awards .swiper-next{
+  right: -100px;
+}
+
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover{
+  background-color: #fff;
+  color: #333 ;
+}
