@@ -1004,3 +1004,20 @@ footer .logo{
   /* img요소는 가로 너비를 웹페이지에서 알고 있다고 한다.*/
   margin: 30px auto 0;
 }
+
+#to-top{
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+}

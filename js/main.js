@@ -19,7 +19,9 @@ searchInputEl.addEventListener('blur', function () {
   searchInputEl.setAttribute('placeholder', '');
 });
 
+// Lodash랑 Gsap이용
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 window.addEventListener('scroll', _.throttle(function () {
   console.log(scrollY);
@@ -29,15 +31,32 @@ window.addEventListener('scroll', _.throttle(function () {
     gsap.to(badgeEl, .6, {
       opacity: 0,
       display: 'none'
-    })
+    });
+
+    //바튼 보이기!
+    gsap.to(toTopEl, .2, {
+      //gsap은 요소를 찾아서 변수형태로 넣어도 된지만, CSS선택자 문법으로 해줘도 인식한다.
+      x: 0 //원래 위치
+    });
   } else {
     //배지 보이기
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
-    })
+    });
+    //버튼 숨기기!
+    gsap.to(toTopEl, .2, {
+      x: 100 //단위는 px
+    });
   }
 }), 300);
+// _.throttle(함수, 시간)
+
+toTopEl.addEventListener('click', function() {
+  gsap.to(window, .7, {
+    scrollTo: 0 //화면의 위치를 0px로 옮기겠다.
+  });
+});
 
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function (fadeEl, index) {
